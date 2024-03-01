@@ -23,6 +23,7 @@
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="500px"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
@@ -38,108 +39,52 @@
             app:layout_constraintTop_toBottomOf="@+id/textView5"
             tools:ignore="MissingConstraints">
 
-            <!-- Doctor 1 -->
-            <!--            <RelativeLayout-->
-            <!--                android:id="@+id/relativeLayoutDoctor1"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:background="@color/gray"-->
-            <!--                android:layout_marginBottom="16dp">-->
-
-            <!--                <TextView-->
-            <!--                    android:id="@+id/textViewDoctor1Name"-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:text="Хорошев Дмитрий, невролог"-->
-            <!--                    android:textSize="24sp" />-->
-
-            <!--                &lt;!&ndash; Add more details about Doctor 1 here &ndash;&gt;-->
-
-            <!--                <Button-->
-            <!--                    android:id="@+id/buttonRecordDoctor1"-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content"-->
-
-            <!--                    android:layout_marginTop="35dp"-->
-            <!--                    android:text="Сделать запись" />-->
-
-            <!--            </RelativeLayout>-->
-
-            <!--            &lt;!&ndash; Doctor 2 &ndash;&gt;-->
-            <!--            <RelativeLayout-->
-            <!--                android:id="@+id/relativeLayoutDoctor2"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_below="@id/relativeLayoutDoctor1"-->
-            <!--                android:layout_marginTop="16dp"-->
-            <!--                android:background="@color/gray"-->
-            <!--                android:layout_marginBottom="16dp">-->
-
-            <!--                <TextView-->
-            <!--                    android:id="@+id/textViewDoctor2Name"-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:text="Долгих Иван, окулист"-->
-            <!--                    android:textSize="24sp" />-->
-
-            <!--                &lt;!&ndash; Add more details about Doctor 2 here &ndash;&gt;-->
-
-            <!--                <Button-->
-            <!--                    android:id="@+id/buttonRecordDoctor2"-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:layout_below="@id/textViewDoctor2Name"-->
-            <!--                    android:layout_marginTop="8dp"-->
-            <!--                    android:text="Сделать запись" />-->
-
-            <!--            </RelativeLayout>-->
-
-            <!--            &lt;!&ndash; Doctor 3 &ndash;&gt;-->
-            <!--            <RelativeLayout-->
-            <!--                android:id="@+id/relativeLayoutDoctor3"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:background="@color/gray"-->
-            <!--                android:layout_below="@id/relativeLayoutDoctor2"-->
-            <!--                android:layout_marginTop="16dp">-->
-
-            <!--                <TextView-->
-            <!--                    android:id="@+id/textViewDoctor3Name"-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:text="Ивано Максим, ортопед"-->
-            <!--                    android:textSize="24sp" />-->
-
-            <!--                &lt;!&ndash; Add more details about Doctor 3 here &ndash;&gt;-->
-
-            <!--                <Button-->
-            <!--                    android:id="@+id/buttonRecordDoctor3"-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:layout_below="@id/textViewDoctor3Name"-->
-            <!--                    android:layout_marginTop="8dp"-->
-            <!--                    android:text="Сделать запись" />-->
-
-            <!--            </RelativeLayout>-->
-
-            <!-- Suggestion to choose a date -->
-
         </RelativeLayout>
     </ScrollView>
 
     <Button
-        android:layout_width="300dp"
-        android:layout_height="52dp"
-        android:text="Записаться"
-        android:onClick="addRecord"
+        android:layout_width="130dp"
+        android:layout_height="55dp"
         android:layout_marginStart="57dp"
-        android:layout_marginTop="653dp"
-        android:layout_marginEnd="54dp"
-        android:layout_marginBottom="26dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="224dp"
+        android:layout_marginBottom="647dp"
+        android:onClick="addRecord"
+        android:text="Записаться"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:layout_width="180dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="93dp"
+
+        android:layout_marginEnd="116dp"
+        android:onClick="viewProfile"
+        android:text="Личный кабинет"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/scrollView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:layout_width="130dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="647dp"
+        android:onClick="addDoctorView"
+        android:text="Добавить врача"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.958"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.001"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
