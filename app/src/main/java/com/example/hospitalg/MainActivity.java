@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 //
 //            ContentValues cv1 = new ContentValues();
 //            cv1.put("fio", "Арсэн Ведерников");
-//            cv1.put("proffession", "Нарколог");
+//            cv1.put("proffession", "Психолог");
 //            long rowID1 = db.insert("doctors", null, cv1);
 //            Log.d("Message", "row inserted in doctor table, ID = " + rowID1);
 //
