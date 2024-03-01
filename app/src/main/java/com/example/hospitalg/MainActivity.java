@@ -102,11 +102,16 @@ public class MainActivity extends AppCompatActivity {
         if(password.equals(passConf)){
             SQLiteDatabase db = conn.getWritableDatabase();
 
-            Cursor c = db.query("users", null, "login =" + login, null, null, null, null);
+            try{
+                Cursor c = db.query("users", null, "login = " + login, null, null, null, null);
 
-            if(c.moveToFirst()){
-                AlertDialog("Регистрация", "Юзер с таким же логином уже находится в бд!!");
-                return;
+                if(c.moveToFirst()){
+                    AlertDialog("Регистрация", "Юзер с таким же логином уже находится в бд!!");
+                    return;
+                }
+            }
+            catch (Exception ex){
+
             }
 
             Log.d("Message", "Insert in table users");

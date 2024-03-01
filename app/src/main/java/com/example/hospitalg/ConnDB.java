@@ -14,16 +14,23 @@ public class ConnDB extends SQLiteOpenHelper {
 
     public ConnDB(Context context){
         super(context, "hospitalDB", null, 1);
+        //context.deleteDatabase("hospitalDB");
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        Log.d("logs", "create user table");
-
         db.execSQL("create table users(" +
                 "id integer primary key autoincrement," +
                 "login text," +
                 "password text)");
+
+        db.execSQL("create table doctors(" +
+                "id integer primary key autoincrement," +
+                "fio text," +
+                "proffession text," +
+                "date text," +
+                "userId INTEGER," +
+                "FOREIGN KEY(userId) REFERENCES users(id))");
     }
 
     @Override
